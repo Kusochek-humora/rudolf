@@ -1,0 +1,45 @@
+.footer {
+    padding: 40px 0 28px;
+    background: #1e1e1e;
+    // &__container {
+    // }
+
+    &__top {
+        padding-bottom: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid #343434;
+    }
+
+    // &__logo {
+    // }
+
+    &__tel,
+    &__address,
+    &__mail {
+        color: $white;
+        font-size: 14px;
+    }
+
+    &__mail {
+        color: $green;
+    }
+
+    &__social {
+        display: flex;
+        gap: 0 20px;
+    }
+
+    // &__social-link {
+    // }
+
+    &__copyright {
+        padding-top: 20px;
+    }
+
+    &__copyright-text {
+        font-size: 14px;
+        color: $grey;
+    }
+}

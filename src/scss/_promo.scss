@@ -1,0 +1,114 @@
+.promo {
+    &__container {
+        display: flex;
+        gap: 0 20px;
+    }
+    &__left {
+        padding: 60px 30px;
+        background-color: $white;
+    }
+    &__left,
+    &__right {
+        max-width: 50%;
+        width: 100%;
+        border-radius: 30px;
+    }
+
+    &__title {
+        margin-bottom: 20px;
+        b {
+            color: $green;
+        }
+    }
+
+    &__text {
+        margin-bottom: 30px;
+    }
+
+    &__links {
+        display: flex;
+        gap: 0 20px;
+    }
+
+    &__link {
+        flex: 1 1 50%;
+        height: 56px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: 0.3s all;
+        background-color: transparent;
+        &:first-child {
+            border: 1px solid $green;
+            &:hover {
+                border: 1px solid #282828;
+                background: #282828;
+            }
+        }
+        &:last-child:hover {
+            color: $white;
+            background-color: $green;
+            border: 1px solid $green;
+        }
+    }
+
+    &__right {
+        padding: 30px;
+        background-color: #90d125;
+        position: relative;
+        overflow: hidden;
+    }
+
+    &__right-text,
+    &__right-subtext {
+        display: inline-block;
+        color: $white;
+        background-color: $black;
+
+        text-transform: uppercase;
+    }
+    &__right-box {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        position: relative;
+        z-index: 2;
+    }
+    &__right-text {
+        border-radius: 10px;
+        font-size: 20px;
+        font-weight: 700;
+        padding: 10px;
+
+        margin-bottom: 5px;
+    }
+
+    &__right-subtext {
+        border-radius: 8px;
+        padding: 5px 10px;
+        b {
+            color: $green;
+        }
+    }
+
+    &__right-item {
+        position: absolute;
+        object-fit: cover;
+        object-position: center;
+        z-index: 0;
+        &:first-of-type {
+            bottom: 0;
+            left: 0;
+            // transform: translate(-10px, 10px);
+        }
+        &:nth-of-type(2) {
+            top: 0;
+            right: 0;
+        }
+        &:last-of-type {
+            bottom: 0;
+            right: 0;
+        }
+    }
+}
+
