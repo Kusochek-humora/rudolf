@@ -1,6 +1,7 @@
 .about {
-
     &__container {
+    }
+    &__inner {
         padding: 30px 40px;
         border-radius: 30px;
         background-color: $white;
@@ -8,7 +9,6 @@
         gap: 0 22px;
         justify-content: space-between;
     }
-
     &__right {
         flex: 1 1 50%;
         display: flex;
@@ -25,10 +25,15 @@
     }
 
     &__left {
-        height: 367px;
+        min-height: 367px;
+        height: auto;
         border-radius: 20px;
         position: relative;
         flex: 1 1 50%;
+
+        img {
+            border-radius: 20px;
+        }
     }
 
     &__hg {
@@ -46,6 +51,19 @@
         object-position: center;
     }
 
-    // &__text {
-    // }
+    @media screen and (max-width: 679px) {
+        &__inner {
+            flex-direction: column;
+            padding: 30px 20px;
+
+            gap: 30px 0;
+        }
+        &__left {
+            min-height: 143px;
+
+            img {
+                object-position: center top;
+            }
+        }
+    }
 }

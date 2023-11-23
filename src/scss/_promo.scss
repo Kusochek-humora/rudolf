@@ -1,4 +1,5 @@
 .promo {
+    margin-top: 157px;
     &__container {
         display: flex;
         gap: 0 20px;
@@ -12,11 +13,13 @@
         max-width: 50%;
         width: 100%;
         border-radius: 30px;
+        min-height: 412px;
     }
 
     &__title {
         margin-bottom: 20px;
         b {
+            font-weight: 500;
             color: $green;
         }
     }
@@ -110,5 +113,111 @@
             right: 0;
         }
     }
-}
 
+    @media screen and (max-width: 1024px) {
+        &__right-item {
+            &:nth-of-type(2) {
+                top: 0;
+                right: -86px;
+            }
+            &:first-of-type {
+                bottom: 12px;
+                left: -89px;
+            }
+            &:last-of-type {
+                bottom: -66px;
+                right: -57px;
+            }
+        }
+    }
+
+    @media screen and (max-width: 1024px) {
+        &__left {
+            max-width: calc(100% - 223px);
+            width: 100%;
+        }
+        &__right {
+            max-width: 223px;
+            width: 100%;
+            padding: 30px;
+        }
+        &__right-text {
+            width: 100%;
+            font-size: 13px;
+        }
+        &__right-subtext {
+            font-size: 12px;
+        }
+        &__right-item {
+            &:nth-of-type(2) {
+                display: none;
+            }
+            &:first-of-type {
+                bottom: -129px;
+                left: -135px;
+            }
+            &:last-of-type {
+                bottom: -89px;
+                right: -180px;
+            }
+        }
+    }
+    @media screen and (max-width: 717px) {
+        &__right {
+            height: 237px;
+            min-height: auto;
+            padding: 20px 10px;
+        }
+        &__right-text {
+            width: auto;
+            font-size: 20px;
+        }
+        &__right-subtext {
+            font-size: 14px;
+        }
+        &__right-item {
+            &:nth-of-type(2) {
+                display: block;
+                top: -20px;
+                right: -50px;
+                transform: rotate(15deg);
+            }
+            &:first-of-type {
+                transform: rotate(15deg);
+                bottom: -150px;
+                left: -106px;
+            }
+            &:last-of-type {
+                bottom: -210px;
+                right: -175px;
+            }
+        }
+        &__left,
+        &__right {
+            max-width: 100%;
+        }
+        &__container {
+            gap: 20px 0;
+            flex-direction: column;
+        }
+    }
+    @media screen and (max-width: 457px) {
+        &__links {
+            flex-direction: column;
+            gap: 20px 0;
+        }
+        &__link {
+            height: 56px;
+            flex: auto;
+        }
+        &__left {
+            padding: 40px 20px;
+        }
+        &__right-item {
+            &:nth-of-type(2) {
+                top: -9px;
+                right: -141px;
+            }
+        }
+    }
+}

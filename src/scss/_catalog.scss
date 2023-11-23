@@ -13,6 +13,8 @@
     &__item {
         flex: 1 1 calc(-25px);
         padding: 20px 10px 24px 10px;
+        display: flex;
+        flex-direction: column;
 
         border-radius: 30px;
         background: #fff;
@@ -59,7 +61,15 @@
         position: relative;
         width: 242px;
         height: 242px;
-
+        align-self: center;
+        @media screen and(max-width:585px) {
+            width: 186px;
+            height: 186px;
+        }
+        @media screen and (max-width: 500px) {
+            width: 140px;
+            height: 140px;
+        }
         img {
             position: absolute;
             top: 0;
@@ -73,20 +83,28 @@
 
     &__item-caption {
         margin-top: 10px;
+        border-radius: 10px;
+
+        padding: 10px 13px;
+        background: #90d125;
     }
 
     &__item-link {
         position: relative;
         z-index: 4;
-        padding: 10px 20px;
+
         font-size: 14px;
         width: 100%;
         display: block;
         text-transform: uppercase;
-        border-radius: 10px;
-        background: #90d125;
+
         color: $white;
         text-align: center;
         transition: 0.3s all;
+        @media screen and(max-width:585px) {
+            font-size: 12px;
+        }
+        @media screen and (max-width: 500px) {
+        }
     }
 }

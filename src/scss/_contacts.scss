@@ -2,6 +2,10 @@
     &__container {
         display: flex;
         gap: 0 20px;
+        @media screen and (max-width: 1024px) {
+            flex-direction: column;
+            gap: 21px 0;
+        }
     }
 
     &__left,
@@ -32,6 +36,7 @@
     &__tel,
     &__mail {
         font-size: 18px;
+        text-align: center;
     }
     &__tel {
         transition: 0.3s all;
@@ -67,6 +72,10 @@
     &__form {
         background-color: $black;
         padding: 30px 30px 40px 30px;
+
+        @media screen and (max-width: 500px){
+            padding: 30px 20px;
+        }
     }
 
     &__form-title,
@@ -86,17 +95,22 @@
     }
 
     &__form-inputs {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        align-items: center;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+        @media screen and (max-width: 500px){
+            display: flex;
+            flex-direction: column;
+        }
         gap: 17px;
     }
 
     &__form-input {
         min-height: 48px;
         display: flex;
-        width: 234px;
+        width: 100%;
 
         padding: 10px 15px;
     }
