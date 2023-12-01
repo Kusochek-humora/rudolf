@@ -51,7 +51,7 @@
             &::before {
                 background-color: rgba(144, 209, 37, 0.5);
             }
-            a {
+            figcaption {
                 background-color: $black;
             }
         }
@@ -86,7 +86,11 @@
         border-radius: 10px;
 
         padding: 10px 13px;
-        background: #90d125;
+        background-color: #90d125;
+
+        position: relative;
+        z-index: 4;
+        transition: 0.3s all;
     }
 
     &__item-link {
@@ -103,8 +107,6 @@
         transition: 0.3s all;
         @media screen and(max-width:585px) {
             font-size: 12px;
-        }
-        @media screen and (max-width: 500px) {
         }
     }
 }
